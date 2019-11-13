@@ -1,0 +1,33 @@
+##Explicación de los tests
+countPositive:
+1. El fallo es que el if consideraba el 0 como numero positivo.
+2. Un caso de prueba queno ejecuta el fallo del código es el nullList.
+3. Cualquier caso de prueba excepto aquellos donde haya ceros en el array, pasan por el error pero no provocan un error.
+4. No es posible.
+5. -
+6. Cambiamos el if a uno con (>) en vez de (>=) y ya pasa todos los tests.
+
+lastZero
+1. El fallo es que no devuelve el último cero, si no el primero.
+2. El fallo está en el for, asi que la unica manera de no pasar por el for es pasando un array vacio (nullList)
+3. Si nuestra lista solo contiene un numero, la variable i siempre tendrá un valor correcto (onlyZero).
+4. Si metemos un array con uno o ningún zero, el resultado final es correcto (cualquier test que no contenga mas de 1 cero)
+5. La variable i tendrá un valor erroneo durante toda la ejecuccion del programa, pero el valor a retornar será el correcto
+6. Hacemos que el bucle for vaya en orden inverso.
+
+findLast
+1. El fallo es que no comprueba el primer valor del array (i = 0)
+2. El fallo está en el for, asi que la unica manera es metiendo la lista vacia (nullList)
+3. No es posible, ya que siempre se va a saltar el índice 0
+4. Cualquier test que tenga el último numero a buscar más alla del indice 0.
+5. La variable i no va a llegar al 0, por lo que no vamos a comprobar arr[0]
+6. Cambiamos la condicion del for para que llegue hasta 0 (i>=0)
+
+oddOrPos
+1. El fallo está en que los numeros negativos impares devuelven un resto de -1 al dividir entre 2.
+2. El fallo está en el if y el if se ejecuta siempre salvo que la lista esté vacia (nullList)
+3. Si tenemos un array que no tenga numeros negativos impares, no hay fallo de estado
+4. Es imposible, ya que si tenemos un numero impar negativo no lo va a contar, fallo de estado implica disfuncion aqui.
+5. -
+6. Cambiamos el if para que la condicion de impar sea True si es distinto de 0.
+
